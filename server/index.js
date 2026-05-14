@@ -5,6 +5,8 @@ const express =require("express");//define routes like /api/...
 const cors =require("cors");
 //separating logic
 const webhookRoutes = require("./routes/webhook");
+const leadRoutes = require("./routes/leads");
+const statsRoutes = require("./routes/stats");
 const app =express(); // creating server instance
 app.use(cors()); // middleware instance
 
@@ -17,13 +19,10 @@ app.use(
 );
 
 app.use("/webhook", webhookRoutes);
+app.use("/api/leads", leadRoutes);
+app.use("/api/stats", statsRoutes);
 
-app.use("/api/leads", (_req, res) =>
-  res.status(501).json({ error: "Coming on Day 3" })
-);
-app.use("/api/stats", (_req, res) =>
-  res.status(501).json({ error: "Coming on Day 3" })
-);
+
 
 app.get("/api/health", (_req, res) => {
   res.json({ status: "ok", timestamp: new Date().toISOString() });
