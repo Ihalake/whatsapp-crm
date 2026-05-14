@@ -1,6 +1,7 @@
 # WhatsApp CRM
+A simple WhatsApp-based CRM that captures leads from Meta WhatsApp API, stores conversations, and tracks customer interactions in real time.
 
-A full-stack WhatsApp CRM system built with the WhatsApp Cloud API.
+Built to demonstrate a state-driven chatbot CRM system where the database holds conversation memory instead of the server.
 
 ## Features
 - WhatsApp webhook integration
@@ -11,23 +12,17 @@ A full-stack WhatsApp CRM system built with the WhatsApp Cloud API.
 - Lead status management
 
 ## Tech Stack
-- Node.js
-- Express
-- SQLite
-- React
-- Tailwind CSS
-- WhatsApp Cloud API
+
+Node.js • Express • SQLite • React (Frontend) • Meta WhatsApp API
 
 ## Project Structure
+whatsapp-crm ->root folder
 /client
 /server
 
-## Setup
-Coming soon...
+## how to run
+open 3 terminals:
+terminal 1 : cd client ->npm start
+terminal 2: cd server -> npm run dev
+terminal 3: ngrok http 5000
 
-## Progress
-- [x] Backend setup
-- [x] Webhook verification
-- [ ] Conversation state machine
-- [ ] CRM REST API
-- [ ] React dashboard
